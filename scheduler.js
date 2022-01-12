@@ -1,5 +1,7 @@
 let classroom = ['Barletti', 'Batistini', 'Belmar', 'Berlincioni', 'Ciampi', 'Cistellini', 'Corsini', 'Dapinguente', 'Di Carlo', 'Fantacci', 'Franceschini', 'Ghelli', 'Guilot', 'La Torre', 'Lanzi', 'Lotti', 'Lulli', 'Magboo', 'Meratti', 'Ndoja', 'Nencioni', 'Pacini', 'Perricone', 'Sartorio', 'Secci', 'Wilun']
 
+let delay = 0
+
 document.querySelector("#shuffle").onclick = () =>
 {
   fillTable(shuffle(classroom))
@@ -19,6 +21,16 @@ document.onkeydown = (e) =>
   document.querySelector("#reset").click()
   else if (e.key === "s" || e.key === "S")
   saveExtraction(classroom)
+  else if (e.key === "ArrowRight")
+  {
+    if (delay <= 1000)
+    delay += 5
+  }
+  else if (e.key === "ArrowLeft")
+  {
+    if (delay > 0)
+    delay -= 5
+  }
 }
 
 function shuffle(array)
@@ -47,7 +59,7 @@ async function fillTable(array)
   {
     document.querySelector("tbody").innerHTML += `<tr><td>${index}</td><td>${array[entry]}</td></tr>`
     index++
-    await sleep(1)
+    await sleep(delay)
   }
   document.querySelector("#reset").disabled = false
 }

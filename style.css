@@ -1,8 +1,11 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto&display=swap';
+
 body
 {
     text-align: center;
     background-color: #000;
     color: #FFF;
+    font-family: 'Roboto', sans-serif;
 }
 
 table
@@ -39,7 +42,7 @@ tr, td, th
     position: absolute;
     top: 10px;
     left: 10px;
-    background: #7300ff
+    background: #7300ff;
 }
 
 button
@@ -56,4 +59,30 @@ button
 .hidden
 {
     display: none;
+}
+
+@media only screen and (max-width: 600px)
+{
+    #shuffle, #reset, #save
+    {
+        font-size: 0.8rem;
+        width: 50px;
+        height: 50px;
+        left: 10px;
+    }
+
+    #save
+    {
+        display: none;
+    }
+
+    #shuffle
+    {
+        top: 5%;
+    }
+
+    #reset
+    {
+        top: 20%;
+    }
 }
