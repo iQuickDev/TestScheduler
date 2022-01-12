@@ -1,0 +1,59 @@
+body
+{
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+}
+
+table
+{
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+}
+
+tr, td, th
+{
+    padding: 5px;
+    border: 1px solid #FFF;
+}
+
+#shuffle
+{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    background: #00ff69;
+}
+
+#reset
+{
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    background: #ff0068;
+}
+
+#save
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #7300ff
+}
+
+button
+{
+    width: 100px;
+    height: 100px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hidden
+{
+    display: none;
+}
